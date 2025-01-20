@@ -13,8 +13,10 @@ typedef struct s_sha256_ctx {
     unsigned char buffer[64];
 } t_sha256_ctx;
 
+
 void sha256_init(t_sha256_ctx *ctx);
 void sha256_update(t_sha256_ctx *ctx, const unsigned char *data, size_t len);
 void sha256_final(t_sha256_ctx *ctx, unsigned char digest[SHA256_DIGEST_SIZE]);
+
 
 #endif //FT_SSL_MD5_SHA256_H

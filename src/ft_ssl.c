@@ -40,16 +40,16 @@ static t_digest_ops g_hash_ops[] = {
             .digest_size    = MD5_DIGEST_SIZE,
             .context_size   = sizeof(t_md5_ctx)
         },
-//        {
-//            /* SHA256 */
-//            .cmd_name       = "sha256",
-//            .cmd_label    = "SHA256",
-//            .init           = (void (*)(void *))sha256_init,
-//            .update         = (void (*)(void *, const unsigned char *, size_t))sha256_update,
-//            .final          = (void (*)(void *, unsigned char *))sha256_final,
-//            .digest_size    = SHA256_DIGEST_SIZE,
-//            .context_size   = sizeof(t_sha256_ctx)
-//        },
+        {
+            /* SHA256 */
+            .cmd_name       = "sha256",
+            .cmd_label      = "SHA256",
+            .init           = (void (*)(void *))sha256_init,
+            .update         = (void (*)(void *, const unsigned char *, size_t))sha256_update,
+            .final          = (void (*)(void *, unsigned char *))sha256_final,
+            .digest_size    = SHA256_DIGEST_SIZE,
+            .context_size   = sizeof(t_sha256_ctx)
+        },
         {
             /* Sentinel (no command name) */
             .cmd_name =  NULL,

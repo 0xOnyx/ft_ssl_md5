@@ -34,12 +34,12 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(@) $(OBJS)
+	$(CC) $(CFLAGS) -g3 -o $(@) $(OBJS)
 
 
 $(PATH_OBJ)$(PATH_SRC)%.o: $(PATH_SRC)%.c $(HEADERS)
 	@mkdir -p $(PATH_OBJ)$(PATH_SRC)
-	$(CC) $(CFLAGS) $(OPTIONS) -c $< -o $@
+	$(CC) -g3 $(CFLAGS) $(OPTIONS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
